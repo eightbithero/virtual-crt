@@ -1,0 +1,186 @@
+# Virtual CRT - Git Ignore File
+# For FPGA projects using Gowin EDA
+
+#==============================================
+# Gowin EDA Build Artifacts
+#==============================================
+
+# Build directory
+build/
+*.fs
+*.bin
+*.rpt
+
+# Gowin project files (optional - comment out if you want to version them)
+# *.gprj
+# *.gao
+# *.rao
+
+# Gowin temporary files
+*.gws
+impl/
+*.gprj.user
+
+# Synthesis outputs
+*.vg
+*.vo
+*.sdf
+
+# Place and Route outputs
+*.pnr
+*.tr
+*.pad
+*.prm
+
+# Bitstream files
+*.fs
+*.bin
+*.bit
+
+# Timing reports
+*_timing.rpt
+*_utilization.rpt
+
+#==============================================
+# Simulation Artifacts
+#==============================================
+
+# Simulation build files
+sim/waves/*.vvp
+sim/waves/*.vcd
+sim/waves/*.fst
+sim/waves/*.ghw
+sim/waves/*.lxt
+
+# Verilator outputs
+obj_dir/
+*.vlt
+
+# ModelSim/QuestaSim
+work/
+transcript
+vsim.wlf
+*.wlf
+*.vstf
+*.ucdb
+*.mti
+
+# VCS
+csrc/
+simv
+simv.daidir/
+ucli.key
+
+#==============================================
+# IP Core Artifacts
+#==============================================
+
+# Gowin IP generated files (keep source .v files)
+hdl/ip/*.vo
+hdl/ip/*.vhdl_generated
+hdl/ip/*.log
+
+#==============================================
+# Operating System Files
+#==============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+#==============================================
+# Editor and IDE Files
+#==============================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Vim
+*.swp
+*.swo
+*.swn
+.*.sw?
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# Eclipse
+.project
+.cproject
+.settings/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+#==============================================
+# Documentation Build Outputs
+#==============================================
+
+# Sphinx
+doc/_build/
+doc/_static/
+doc/_templates/
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
+
+#==============================================
+# Miscellaneous
+#==============================================
+
+# Backup files
+*.bak
+*.backup
+*.old
+*~
+
+# Log files
+*.log
+
+# Compressed files
+*.zip
+*.tar.gz
+*.tar.bz2
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+#==============================================
+# Project Specific
+#==============================================
+
+# Keep these directories but ignore their contents initially
+# (Remove these lines after adding content)
+# build/*
+# !build/.gitkeep
+
+# Test data
+test_data/
+
+# Hardware debug outputs
+*.jtag
+*.svf

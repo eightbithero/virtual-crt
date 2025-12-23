@@ -1,0 +1,89 @@
+//******************************************************
+// Tang Nano 4K Pin Constraints for Virtual CRT
+// Device: GW1NSR-LV4CQN48PC7/I6
+//******************************************************
+
+//******************************************************
+// Clock inputs
+//******************************************************
+IO_LOC "clk_27m" 45;
+IO_PORT "clk_27m" PULL_MODE=UP;
+
+//******************************************************
+// NTSC Video Output
+//******************************************************
+// Composite video DAC output (using FPGA pins with resistor ladder)
+IO_LOC "ntsc_luma[7]" 25;
+IO_LOC "ntsc_luma[6]" 26;
+IO_LOC "ntsc_luma[5]" 27;
+IO_LOC "ntsc_luma[4]" 28;
+IO_LOC "ntsc_luma[3]" 29;
+IO_LOC "ntsc_luma[2]" 30;
+IO_LOC "ntsc_luma[1]" 31;
+IO_LOC "ntsc_luma[0]" 32;
+
+IO_LOC "ntsc_chroma[7]" 33;
+IO_LOC "ntsc_chroma[6]" 34;
+IO_LOC "ntsc_chroma[5]" 35;
+IO_LOC "ntsc_chroma[4]" 36;
+IO_LOC "ntsc_chroma[3]" 37;
+IO_LOC "ntsc_chroma[2]" 38;
+IO_LOC "ntsc_chroma[1]" 39;
+IO_LOC "ntsc_chroma[0]" 40;
+
+IO_LOC "ntsc_sync" 41;
+
+// Output drive strength
+IO_PORT "ntsc_luma[7]" DRIVE=8;
+IO_PORT "ntsc_luma[6]" DRIVE=8;
+IO_PORT "ntsc_luma[5]" DRIVE=8;
+IO_PORT "ntsc_luma[4]" DRIVE=8;
+IO_PORT "ntsc_luma[3]" DRIVE=8;
+IO_PORT "ntsc_luma[2]" DRIVE=8;
+IO_PORT "ntsc_luma[1]" DRIVE=8;
+IO_PORT "ntsc_luma[0]" DRIVE=8;
+
+IO_PORT "ntsc_chroma[7]" DRIVE=8;
+IO_PORT "ntsc_chroma[6]" DRIVE=8;
+IO_PORT "ntsc_chroma[5]" DRIVE=8;
+IO_PORT "ntsc_chroma[4]" DRIVE=8;
+IO_PORT "ntsc_chroma[3]" DRIVE=8;
+IO_PORT "ntsc_chroma[2]" DRIVE=8;
+IO_PORT "ntsc_chroma[1]" DRIVE=8;
+IO_PORT "ntsc_chroma[0]" DRIVE=8;
+
+IO_PORT "ntsc_sync" DRIVE=8;
+
+//******************************************************
+// USB-C Interface (Type-C connector pins)
+//******************************************************
+// Note: Actual pinout depends on hardware design
+// These are placeholder locations
+IO_LOC "usb_dp" 17;
+IO_LOC "usb_dm" 18;
+IO_PORT "usb_dp" PULL_MODE=UP;
+IO_PORT "usb_dm" PULL_MODE=UP;
+
+//******************************************************
+// Debug LEDs (onboard)
+//******************************************************
+IO_LOC "led[0]" 10;
+IO_LOC "led[1]" 11;
+IO_LOC "led[2]" 13;
+IO_LOC "led[3]" 14;
+IO_LOC "led[4]" 15;
+IO_LOC "led[5]" 16;
+
+//******************************************************
+// Debug UART
+//******************************************************
+IO_LOC "uart_tx" 17;
+IO_LOC "uart_rx" 18;
+IO_PORT "uart_tx" PULL_MODE=UP;
+IO_PORT "uart_rx" PULL_MODE=UP;
+
+//******************************************************
+// Reset button
+//******************************************************
+IO_LOC "rst_n" 14;
+IO_PORT "rst_n" PULL_MODE=UP;
